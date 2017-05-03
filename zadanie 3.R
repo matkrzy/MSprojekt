@@ -29,4 +29,14 @@ prawa_granica_przedialu <- srednia_z_proby + skladnik
 
 Wzgledna_precyzja_oszacowania <- skladnik / srednia_z_proby * 100 # mnożenie przez 100 tylko po to, żebyh mieć w procentach
 
-# Sprawdzić czy mamy podstawy to uogulnić -> jeszcze nie ma
+# Sprawdzić czy mamy podstawy to uogulnić 
+if(Wzgledna_precyzja_oszacowania <= 5)
+{
+  czy_mozna_uogulnic_na_populacje_zad3 <- "tak"
+}else if (Wzgledna_precyzja_oszacowania > 10)
+{
+  czy_mozna_uogulnic_na_populacje_zad3 <- "nie"
+}else 
+{
+  czy_mozna_uogulnic_na_populacje_zad3 <- "tak, ale z zachowaniem ostroznosci"
+}
