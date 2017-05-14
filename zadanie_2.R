@@ -2,10 +2,10 @@
 ########### ZADANIE 2 ################
 ######################################
 ## alfa = 0.05
-## hipoteza H0 - rozk³ad normalny
+## hipoteza H0 - rozk?ad normalny
 
 library(readxl)
-data <- read_excel("C:/Users/Artur/Desktop/MSprojekt/data.xlsx")
+data <- read_excel("~/MSprojekt/data.xlsx")
 
 #przypisanie kolumn danych do zmiennych
 col1 <-data[,1]
@@ -86,7 +86,7 @@ for(i in 1:25)
 i_n
 
 ###########################################
-#pobranie z tablic Ko³mogorowa wartoœci F0 dla wartoœci standaryzowanych x
+#pobranie z tablic Ko?mogorowa warto?ci F0 dla warto?ci standaryzowanych x
 F01=col1
 F02=col2
 
@@ -180,13 +180,13 @@ tabela2
 ##################################
 #wartosc krytyczna dla poziomu istotnosci 0.05 z tablic wynosi d=0.264
 #Tabela 1:
-#najwiêksze wartosci z dwóch ostatnich kolumn to: d1=0.13 oraz d2=0.10
+#najwi?ksze wartosci z dw?ch ostatnich kolumn to: d1=0.13 oraz d2=0.10
 #Tabela 2:
-#najwiêksze wartosci z dwóch ostatnich kolumn to: d1=0.12 oraz d2=0.11
+#najwi?ksze wartosci z dw?ch ostatnich kolumn to: d1=0.12 oraz d2=0.11
 ################################# 
-#Wybieramy wiêksz¹ wartoœæ z naszych obu kolumn dla ka¿dej z tablic d11=0.13 d22=0.12
-#Poniewa¿ 0.13 oraz 0.12 <0.264, wiêc test Ko³mogorowa nie odrzuca hipotezy zerowej , mówi¹cej
-#o tym, ¿e jest to rok³ad normalny
+#Wybieramy wi?ksz? warto?? z naszych obu kolumn dla ka?dej z tablic d11=0.13 d22=0.12
+#Poniewa? 0.13 oraz 0.12 <0.264, wi?c test Ko?mogorowa nie odrzuca hipotezy zerowej , m?wi?cej
+#o tym, ?e jest to rok?ad normalny
 
 ######################################
 ############# KONIEC #################
