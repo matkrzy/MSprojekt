@@ -49,8 +49,8 @@ quantile_col1 <- quantile(col1,0.75)
 quantile_col2 <- quantile(col2,0.75)
 
 #wspolczynnik zmiennosci
-change_point_col1 = std_dev_col1/average_col1
-change_point_col2 = std_dev_col2/average_col2
+variability_point_col1 = std_dev_col1/average_col1
+variability_point_col2 = std_dev_col2/average_col2
 
 #skosnosc
 skewnes<-function(std_dev,average,column){
@@ -80,6 +80,36 @@ skewnes_col2<-skewnes(std_dev_col2,average_col2,col2)
 kurtosis_col1<-kurtosis(std_dev_col1,average_col1,col1)
 kurtosis_col2<-kurtosis(std_dev_col2,average_col2,col2)
 
+summary1=data.frame(
+  min = min_col1,
+  max = max_col1,
+  average = average_col1,
+  media = median_col1,
+  mode = mode1,
+  std_dev = std_dev_col1,
+  varianc = var_col1,
+  quantile_0.75 = quantile_col1,
+  variability_point = variability_point_col1,
+  skewnes = skewnes_col1,
+  kurtosis = kurtosis_col1
+  )
+
+summary2=data.frame(
+  min = min_col2,
+  max = max_col2,
+  average = average_col2,
+  media = median_col2,
+  mode = mode2,
+  std_dev = std_dev_col2,
+  varianc = var_col2,
+  quantile_0.75 = quantile_col2,
+  variability_point = variability_point_col2,
+  skewnes = skewnes_col2,
+  kurtosis = kurtosis_col2
+)
+
+summary1
+summary2
 #szereg
 k<-sqrt(NROW(col1));
 
