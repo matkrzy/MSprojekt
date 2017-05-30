@@ -5,24 +5,25 @@
 hipoteza <- "Srednia rentownosc firmy poprawila sie w 1995 roku"
 
 library(readxl)
-data <- read_excel("~/MSprojekt/data.xlsx")
+data <- read_excel("data.xlsx")
 
-#przypisanie kolumn danych do zmiennych
+
 hipoteza
 
+#przypisanie kolumn danych do zmiennych
 col1 <-data[,1]
 col2 <-data[,2]
 
 alfa = 0.05
 
-srednia_1994 <- mean(col1)  #srednie
-srednia_1995 <- mean(col2)
+srednia_1994 <- mean(col1$`1994r`)  #srednie
+srednia_1995 <- mean(col2$`1995r`)
 
-odchyl_1994 <- sd(col1) #odchylenia standardowe
-odychl_1995 <- sd(col2)
+odchyl_1994 <- sd(col1$`1994r`) #odchylenia standardowe
+odychl_1995 <- sd(col2$`1995r`)
 
-wariancja_1994 <- var(col1) #wariancje
-wariancja_1995 <- var(col2)
+wariancja_1994 <- var(col1$`1994r`) #wariancje
+wariancja_1995 <- var(col2$`1995r`)
   
 n = 25
 
@@ -39,3 +40,4 @@ if (statystyka < obsz_kryt1 || statystyka > obsz_kryt2){
 }
 
 wynik_hipotezy
+
