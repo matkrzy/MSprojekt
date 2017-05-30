@@ -33,9 +33,9 @@ obsz_kryt1 <- -statystyka*(1-alfa/2) #jedna granica obszaru
 obsz_kryt2 <- statystyka*(1-alfa/2) #druga granica obszaru
 
 if (statystyka < obsz_kryt1 || statystyka > obsz_kryt2){
-  wynik_hipotezy <- "odrzucamy hipoteze zerowa"
+  wynik_hipotezy <- "odrzucamy hipoteze zerowa na poziomie istotnosci 0.05"
 }else{
-  wynik_hipotezy <- "przyjmujemy hipoteze zerowa"
+  wynik_hipotezy <- "stwierdzamy brak podstaw do odrzucenia hipotezy"
 }
 
 wynik_hipotezy
